@@ -1,6 +1,8 @@
+
+##.htaccess file for bedrock application if website root folder can not be changed
 ```sh
 # BEGIN WordPress Bedrock
-# The directives (lines) between "BEGIN WordPress" and "END WordPress" are
+# The directives (lines) between "BEGIN WordPress Bedrock" and "END WordPress Bedrock" are
 # dynamically generated, and should only be modified via WordPress filters.
 # Any changes to the directives between these markers will be overwritten.
 <IfModule mod_rewrite.c>
