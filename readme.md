@@ -49,4 +49,13 @@ define( 'WP_HOME', 'https://example.com' );
 define( 'WP_SITEURL', 'https://example.com' );
 
 ```
+### git init helper for define existed repo
 
+```sh
+git init
+git remote add origin git@gitlab.com:exampleprofile/example-repo.git
+git add .
+git commit -m "first commit"
+git branch -M main
+git push --set-upstream origin main
+```
