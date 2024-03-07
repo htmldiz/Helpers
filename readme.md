@@ -1,4 +1,7 @@
-## remove_all_transients.sql file removing all transients in database
+## Import file into database
+mysql -u <username> -p <databasename> < <filename.sql>
+
+## remove_all_transients.sql file removing all transients in the database
 
 ## .htaccess file for bedrock application if website root folder can not be changed
 ```sh
