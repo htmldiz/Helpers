@@ -41,3 +41,12 @@ Deny from all
 </files>
 # END WordPress Bedrock
 ```
+
+## define website URL
+```php
+
+define( 'WP_HOME', 'https://example.com' );
+define( 'WP_SITEURL', 'https://example.com' );
+
+```
+
