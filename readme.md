@@ -1,5 +1,6 @@
+## remove_all_transients.sql file removing all transients in database
 
-##.htaccess file for bedrock application if website root folder can not be changed
+## .htaccess file for bedrock application if website root folder can not be changed
 ```sh
 # BEGIN WordPress Bedrock
 # The directives (lines) between "BEGIN WordPress Bedrock" and "END WordPress Bedrock" are
