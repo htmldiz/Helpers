@@ -45,8 +45,8 @@ Deny from all
 ## define website URL
 ```php
 
-define( 'WP_HOME', 'https://example.com' );
-define( 'WP_SITEURL', 'https://example.com' );
+define( 'WP_HOME', 'example_url' );
+define( 'WP_SITEURL', 'example_url' );
 
 ```
 ### git init helper for define existed repo
@@ -59,3 +59,8 @@ git commit -m "first commit"
 git branch -M main
 git push --set-upstream origin main
 ```
+
+# Search and reaplce db:
+git clone https://github.com/interconnectit/Search-Replace-DB.git sar && cd sar && rm -fr ./.git
+php srdb.cli.php -h dbhost -n dbname -u root -p "" -s "search" -r "replace"
+
