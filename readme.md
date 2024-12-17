@@ -4,17 +4,19 @@ mysql -u <username> -p <databasename> < <filename.sql>
 ## remove_all_transients.sql file removing all transients in the database
 
 ## .htaccess file for bedrock application in subfolder
+```sh
 RewriteEngine on
 RewriteCond %{HTTP_HOST} ^example.com$ [NC,OR]
 RewriteCond %{HTTP_HOST} ^example.com$
 RewriteCond %{REQUEST_URI} !web/
 RewriteRule (.*) /web/$1 [L]
 RewriteEngine On
-
+```
 ## .htaccess redirect from www
+```sh
 RewriteCond %{HTTP_HOST} ^www.example.com [NC]
 RewriteRule ^(.*)$ https://example.com/$1 [L,R=301]
-
+```
 
 ## .htaccess file for bedrock application if website root folder can not be changed
 ```sh
