@@ -1,3 +1,11 @@
+## disable wp cron
+```sh
+    ADD CRON JOB wget -q -O - https://example.com/wp-cron.php?doing_wp_cron
+```
+```php
+define('DISABLE_WP_CRON', true);
+```
+
 ## ERRORS and WARNINGS ARRAY
 ```php
 $errorsActive = [
