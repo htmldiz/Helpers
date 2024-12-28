@@ -1,3 +1,29 @@
+## ERRORS and WARNINGS ARRAY
+```sh
+$errorsActive = [
+    E_ERROR             => TRUE,
+    E_WARNING           => TRUE,
+    E_PARSE             => TRUE,
+    E_NOTICE            => FALSE,
+    E_CORE_ERROR        => FALSE,
+    E_CORE_WARNING      => FALSE,
+    E_COMPILE_ERROR     => FALSE,
+    E_COMPILE_WARNING   => FALSE,
+    E_USER_ERROR        => TRUE,
+    E_USER_WARNING      => TRUE,
+    E_USER_NOTICE       => FALSE,
+    E_STRICT            => FALSE,
+    E_RECOVERABLE_ERROR => TRUE,
+    E_DEPRECATED        => FALSE,
+    E_USER_DEPRECATED   => FALSE,
+    E_ALL               => FALSE,
+];
+error_reporting(
+    array_sum(
+        array_keys($errorsActive, $search = true)
+    )
+);
+```
 ## Import file into database
 mysql -u <username> -p <databasename> < <filename.sql>
 
