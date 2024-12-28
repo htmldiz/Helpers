@@ -1,5 +1,5 @@
 ## ERRORS and WARNINGS ARRAY
-```sh
+```php
 $errorsActive = [
     E_ERROR             => TRUE,
     E_WARNING           => TRUE,
