@@ -10,15 +10,15 @@ define('DISABLE_WP_CRON', true);
 ```php
 $errorsActive = [
     E_ERROR             => TRUE,
-    E_WARNING           => TRUE,
-    E_PARSE             => TRUE,
+    E_WARNING           => FALSE,
+    E_PARSE             => FALSE,
     E_NOTICE            => FALSE,
     E_CORE_ERROR        => FALSE,
     E_CORE_WARNING      => FALSE,
     E_COMPILE_ERROR     => FALSE,
     E_COMPILE_WARNING   => FALSE,
     E_USER_ERROR        => TRUE,
-    E_USER_WARNING      => TRUE,
+    E_USER_WARNING      => FALSE,
     E_USER_NOTICE       => FALSE,
     E_STRICT            => FALSE,
     E_RECOVERABLE_ERROR => TRUE,
@@ -133,8 +133,9 @@ if (env('WP_REDIS_TOKEN')) {
 		'prefetch' => true,
 		'debug' => false,
 		'save_commands' => false,
-		'prefix' => $DB_NAME,
+		'prefix' => Config::get('DB_NAME'),
 	]);
+	Config::define( 'WP_REDIS_DISABLED', false );
 }
 ```
 ```sh
