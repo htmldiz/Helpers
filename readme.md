@@ -115,3 +115,30 @@ git clone https://github.com/interconnectit/Search-Replace-DB.git sar && cd sar 
 php srdb.cli.php -h dbhost -n dbname -u root -p "" -s "search" -r "replace"
 ```
 
+
+```php
+if (env('WP_REDIS_TOKEN')) {
+	Config::define('WP_REDIS_CONFIG', [
+		'token' => env('WP_REDIS_TOKEN'),
+		'host' => '127.0.0.1',
+		'port' => env('WP_REDIS_PORT'),
+		'database' => env('WP_REDIS_DATABASE'),
+		'timeout' => 2.5,
+		'read_timeout' => 2.5,
+		'split_alloptions' => true,
+		'async_flush' => true,
+		'client' => 'phpredis',
+		'compression' => 'zstd',
+		'serializer' => 'igbinary',
+		'prefetch' => true,
+		'debug' => false,
+		'save_commands' => false,
+		'prefix' => $DB_NAME,
+	]);
+}
+```
+```sh
+WP_REDIS_TOKEN=""
+WP_REDIS_PORT=""
+WP_REDIS_DATABASE=""
+```
