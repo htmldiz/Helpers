@@ -117,7 +117,7 @@ php srdb.cli.php -h dbhost -n dbname -u root -p "" -s "search" -r "replace"
 
 
 ```php
-if (env('WP_REDIS_TOKEN')) {
+if (!empty(env('WP_REDIS_TOKEN',''))) {
 	Config::define('WP_REDIS_CONFIG', [
 		'token' => env('WP_REDIS_TOKEN'),
 		'host' => '127.0.0.1',
