@@ -2,7 +2,8 @@
 ```sh
 ADD CRON JOB wget -q -O - https://example.com/wp-cron.php?doing_wp_cron
 ```
-```php // production.php
+```php
+/* production.php */
 Config::define('DISALLOW_INDEXING', false);
 Config::define('DISALLOW_FILE_MODS', false);
 Config::define('DISABLE_WP_CRON', true);
