@@ -1,11 +1,11 @@
 ## disable wp cron
 ```sh
-    ADD CRON JOB wget -q -O - https://example.com/wp-cron.php?doing_wp_cron
+ADD CRON JOB wget -q -O - https://example.com/wp-cron.php?doing_wp_cron
 ```
 ```php
 define('DISABLE_WP_CRON', true);
 ```
-# Enable redis for bedrock Object Cache Pro:
+## Enable redis for bedrock Object Cache Pro:
 ```php
 if (!empty(env('WP_REDIS_TOKEN',''))) {
 	Config::define('WP_REDIS_CONFIG', [
