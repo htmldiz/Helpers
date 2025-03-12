@@ -31,7 +31,7 @@ class RewriteRules
 			foreach (self::$remove_slugs_for_post_types as $post_type) {
 				$_post = get_page_by_path($name, OBJECT, $post_type);
 				if($_post && !$new_query){
-					$new_query =  array($post_type => $name);
+					$new_query =  array("post_type" => $post_type ,'name' => $name);
 				}
 			}
 		}
