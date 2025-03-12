@@ -20,7 +20,7 @@ class RewriteRules
 	}
 	public function request($query) {
 		$new_query = false;
-		if(isset($query['name'])  && empty($query['page']) && !empty($query['name'])){
+		if(isset($query['page']) && isset($query['name']) && empty($query['page']) && !empty($query['name'])){
 			$name = $query['name'];
 			foreach (self::$remove_slugs_for_taxonomies as $taxonomy) {
 				$term = get_term_by('slug', $name, $taxonomy);
