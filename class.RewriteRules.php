@@ -4,10 +4,9 @@ class RewriteRules
 	public static $remove_slugs_for_taxonomies = array( 'activity_type');
 	public static $remove_slugs_for_post_types = array( 'activity' );
 	function __construct(){
-	    add_action('init', [ $this, 'init' ] );
 		add_filter('request', [ $this, 'request' ],10,1 );
-	    add_filter('term_link', [ $this, 'replace_term_links' ],10,3 );
-	    add_filter('post_type_link', [ $this, 'replace_post_links' ],10,3 );
+		add_filter('term_link', [ $this, 'replace_term_links' ],10,3 );
+		add_filter('post_type_link', [ $this, 'replace_post_links' ],10,3 );
 	}
 	public function replace_post_links($permalink, $post, $leavename ) {
 		if(! in_array( $post->post_type, self::$remove_slugs_for_post_types ) ) return $permalink;
@@ -37,11 +36,5 @@ class RewriteRules
 			}
 		}
 		return !$new_query ? $query : $new_query;
-	}
-	public function init(){
-
-//		global $wp_rewrite;
-//		var_dump($wp_rewrite->extra_permastructs);
-//		var_dump($wp_rewrite->extra_permastructs);
 	}
 }
