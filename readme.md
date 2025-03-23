@@ -35,6 +35,13 @@ if (!empty(env('WP_REDIS_TOKEN',''))) {
 }
 ```
 
+## .env new variables
+```sh
+WP_REDIS_TOKEN=""
+WP_REDIS_PORT=""
+WP_REDIS_DATABASE=""
+```
+
 ## ERRORS and WARNINGS ARRAY
 ```php
 $errorsActive = [
@@ -144,9 +151,3 @@ git clone https://github.com/interconnectit/Search-Replace-DB.git sar && cd sar 
 php srdb.cli.php -h dbhost -n dbname -u root -p "" -s "search" -r "replace"
 ```
 
-
-```sh
-WP_REDIS_TOKEN=""
-WP_REDIS_PORT=""
-WP_REDIS_DATABASE=""
-```
